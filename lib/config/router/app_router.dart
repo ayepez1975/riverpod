@@ -1,3 +1,4 @@
+import 'package:app_widgets/presentation/screens/snackbar/snackbar_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -28,7 +29,19 @@ GoRouter appRouter(AppRouterRef ref) {
         path: '/progress',
         name: ProgresssScreen.name,
         builder: (context, state) => const ProgresssScreen(),
+      ),
+       GoRoute(
+        path: '/snackbars',
+        name: SnackBarScreen.name,
+        builder: (context, state) => const SnackBarScreen(),
+      ),
+       GoRoute(
+        path: '/ui-controls',
+        name: UiControlsScreen.name,
+        builder: (context, state) => const UiControlsScreen(),
       )
+
+
 
     ],
   );
