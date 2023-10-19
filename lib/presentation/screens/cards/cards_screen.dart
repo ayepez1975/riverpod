@@ -29,12 +29,12 @@ class _CardsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(children: [
-        // ...cards.map((card) =>
-        //     _CardType1(elevation: card['elevation'], label: card['label'])),
-        // ...cards.map((card) =>
-        //     _CardType2(elevation: card['elevation'], label: card['label'])),
-        //  ...cards.map((card) =>
-        //      _CardType3(elevation: card['elevation'], label: card['label'])),
+        ...cards.map((card) =>
+            _CardType1(elevation: card['elevation'], label: card['label'])),
+        ...cards.map((card) =>
+            _CardType2(elevation: card['elevation'], label: card['label'])),
+         ...cards.map((card) =>
+             _CardType3(elevation: card['elevation'], label: card['label'])),
 
         ...cards.map((card) =>
             _CardType4(elevation: card['elevation'], label: card['label'])),
@@ -157,7 +157,7 @@ class _CardType4 extends StatelessWidget {
         Align(
             alignment: Alignment.topRight,
             child: Container(
-              decoration: BoxDecoration( 
+              decoration: const BoxDecoration( 
                 color: Colors.white,
                 borderRadius: BorderRadius.only( bottomLeft: Radius.circular(20))
               ),

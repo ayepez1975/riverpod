@@ -18,9 +18,7 @@ class ProgresssScreen extends StatelessWidget {
 }
 
 class _ProgressView extends StatelessWidget {
-  const _ProgressView({
-    super.key,
-  });
+  const _ProgressView();
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +53,7 @@ class _ControllerProgressIndicator extends StatelessWidget {
       builder: (context, snapshot) {
         final progressValue = snapshot.data ?? 0;
         return Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
               CircularProgressIndicator(
@@ -63,7 +61,7 @@ class _ControllerProgressIndicator extends StatelessWidget {
                 strokeWidth: 2,
                 backgroundColor: Colors.black12,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Expanded(

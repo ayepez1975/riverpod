@@ -90,7 +90,7 @@ class _ControlsView extends ConsumerWidget {
           ],
         ),
         ExpansionTile(
-          title: Text('Alimentos '),
+          title: const Text('Alimentos '),
           children: [
             CheckboxListTile.adaptive(
               title: const Text('Desayuno'),

@@ -58,7 +58,7 @@ class _ButonsView extends StatelessWidget {
             TextButton.icon(onPressed: (){}, icon: const Icon(Icons.telegram), label: const Text('Telegrama')),
 
 
-          CustomButton(),
+          const CustomButton(),
             IconButton(onPressed: (){}, icon: const Icon(Icons.radar)),
             IconButton(onPressed: (){}, icon: const Icon(Icons.radar, ),
              style: const ButtonStyle(
@@ -92,9 +92,9 @@ class CustomButton extends StatelessWidget {
         color: colorList[3],
         child: InkWell(
           onTap: (){},
-          child: Padding(
-            padding: const  EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: const Text('ArmandoYepez', style: TextStyle(color: Colors.white),),
+          child: const Padding(
+            padding:   EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child:  Text('ArmandoYepez', style: TextStyle(color: Colors.white),),
           ),
         ),
       ),

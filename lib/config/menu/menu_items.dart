@@ -21,11 +21,16 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Mensajes Emergentes',
       link: '/snackbars',
       icon: Icons.message),
-        MenuItem(
+  MenuItem(
       title: 'UI Controls',
       subTitle: 'CheckBox ListTile, etc',
       link: '/ui-controls',
       icon: Icons.message),
+       MenuItem(
+      title: 'Tutorial',
+      subTitle: 'Para Inicial Tutorial',
+      link: '/tutorial',
+      icon: Icons.book),
 ];
 
 class MenuItem {
