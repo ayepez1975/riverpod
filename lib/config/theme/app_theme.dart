@@ -13,6 +13,20 @@ const colorList = <Color>[
   Colors.yellow
 ];
 
+const colorsList= <Color>[
+  Colors.white,
+  Colors.blue,
+  Colors.red,
+  Colors.teal,
+  Colors.indigo,
+  Colors.green,
+  Colors.pink,
+  Colors.purple,
+  Colors.black,
+  Colors.black54,
+  Colors.yellow
+];
+
 class AppTheme {
   final int selectedColor;
   final bool isDarkmode;
@@ -23,17 +37,28 @@ class AppTheme {
             'El colors seleccionado debe ser ${colorList.length} ');
 
   ThemeData getTheme() => ThemeData(
+    
         useMaterial3: true,
         colorSchemeSeed: colorList[selectedColor],
         brightness: isDarkmode ? Brightness.dark : Brightness.light,
         appBarTheme: const AppBarTheme(centerTitle: false),
-
+        filledButtonTheme: FilledButtonThemeData(
+          style: ButtonStyle(
+             backgroundColor:MaterialStatePropertyAll(colorList[selectedColor]) ,
+             foregroundColor: MaterialStatePropertyAll(colorsList[0])
+             )),
+        iconButtonTheme: IconButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(colorList[selectedColor]),
+            iconColor: MaterialStatePropertyAll(colorsList[0])
+          )
+        ),
         listTileTheme: ListTileThemeData(
             //textColor: colorList[selectedColor],
-              
             selectedTileColor: colorList[selectedColor],
             iconColor: colorList[selectedColor],
-        )
+        ),
+        
             
             
             
