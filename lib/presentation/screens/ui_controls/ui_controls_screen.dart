@@ -1,5 +1,5 @@
 import 'package:app_widgets/presentation/screens/ui_controls/providers/controls_providers.dart';
-import 'package:app_widgets/widgets/widgets.dart';
+import 'package:app_widgets/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

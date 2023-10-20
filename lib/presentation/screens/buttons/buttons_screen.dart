@@ -3,7 +3,7 @@ import 'package:app_widgets/config/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../widgets/widgets.dart';
+import '../../widgets/widgets.dart';
 
 class ButtonsScreen extends StatelessWidget {
   const ButtonsScreen({super.key});

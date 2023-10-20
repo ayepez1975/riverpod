@@ -1,4 +1,4 @@
-import 'package:app_widgets/widgets/widgets.dart';
+import 'package:app_widgets/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 const cards = <Map<String, dynamic>>[

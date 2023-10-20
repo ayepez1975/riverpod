@@ -1,29 +1,30 @@
 import 'package:app_widgets/config/menu/menu_items.dart';
+import 'package:app_widgets/presentation/screens/home/providers/home_providers.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../widgets/widgets.dart';
+import '../../widgets/widgets.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
   static const name = 'HomeScreen';
 
- 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    
+
+
 
     return Scaffold(
+       key: ref.watch(scafooldKeyProvider),
         appBar: AppBar(
-          actions: const [
-            AppBarCustom()
-          ],
+          elevation: 1,
+          actions: const [AppBarCustom()],
           title: const Text('Materia Widget'),
         ),
-        
-        body: _HomeView());
+        body: _HomeView(),
+        drawer: SideMenu());
   }
 }
 
@@ -55,7 +56,6 @@ class _CustomListTile extends StatelessWidget {
       title: Text(menu.title),
       subtitle: Text(menu.subTitle),
       onTap: () {
-        
         context.push(menu.link);
       },
     );
